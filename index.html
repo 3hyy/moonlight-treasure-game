@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>月影寻宝记 · Async/Await</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div class="eyebrow">ASYNC ADVENTURE · 01</div>
+      <h1>月影寻宝记</h1>
+      <p>一段由 <span>async / await</span> 驱动的异步探险</p>
+      <button id="startButton" class="start-button">开始探险 <span>↗</span></button>
+    </section>
+
+    <section class="game-card">
+      <div class="hud">
+        <div><small>探险进度</small><strong id="progressText">0%</strong></div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+        <div class="status-pill" id="statusPill">等待出发</div>
+      </div>
+
+      <div class="scene" id="scene" aria-live="polite">
+        <div class="stars">✦　·　✧　　·　✦　·　✧</div>
+        <div class="moon">☾</div>
+        <div class="mountains">⌁⌁⌁⌁⌁⌁⌁⌁⌁</div>
+        <div class="path"></div>
+        <div class="character" id="character">🧭</div>
+        <div class="scene-object" id="sceneObject">🗺️</div>
+        <div class="scene-title" id="sceneTitle">准备好寻找失落的月光宝石了吗？</div>
+      </div>
+
+      <div class="below-grid">
+        <div class="story-panel">
+          <div class="panel-title"><span>✦</span> 探险日志</div>
+          <div id="log" class="log"><div class="log-empty">点击“开始探险”，故事即将展开……</div></div>
+        </div>
+        <div class="clue-panel">
+          <div class="panel-title"><span>◇</span> 当前线索</div>
+          <div id="clue" class="clue">尚未发现线索</div>
+          <div class="code-note">Promise 链已升级为清晰的 async / await 流程。</div>
+        </div>
+      </div>
+    </section>
+    <footer>每一步都在等待异步任务完成 · 祝你好运，探险家</footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
